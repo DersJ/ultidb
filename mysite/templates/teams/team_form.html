@@ -1,0 +1,18 @@
+{% extends "teams/header.html" %}
+{% load crispy_forms_tags %}
+
+{%block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 offset-sm-2">
+<h3 class="display-4 mt-4">Edit {{team.name}}</h3>
+
+<form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
+{{ form|crispy }}
+<input type='submit' class="btn btn-primary" value = 'Submit'>
+</form>
+
+</div>
+</div>
+</div>
+{%endblock content%}

@@ -1,0 +1,39 @@
+{% extends "teams/header.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+<h2><a href="/teams/{{ roster.associated_team.id }}/" >{{roster}}</a></h2>
+<div class="row">
+<div class="col-sm-6">
+
+<h4>Roster</h4>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+  </tr>
+</thead>
+<tbody>
+
+{% for rm in rm_list %}
+    <tr>
+    	<th scope="row">{{ rm.number }}</th>
+      	<td>{{ rm.player.first_name}}</td>
+      	<td>{{ rm.player.last_name}}</td>
+      	
+    </tr>
+
+{% endfor %}
+</tbody>
+</table>
+
+</div>
+<div class="col-sm-6">
+	<h4>Games</h4>
+</div>
+</div>
+
+{% endblock %}	

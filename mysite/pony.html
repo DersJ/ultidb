@@ -1,0 +1,2147 @@
+
+<!doctype html> 
+<!--[if lt IE 7]>      <html class="html no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="html no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="html no-js lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>        <html class="html no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="html no-js"> <!--<![endif]-->
+<head id="head"><meta name="description" content="SiteStartup Description" /><meta name="keywords" content="SiteStartup,Keywords" /><meta charset="utf-8" /><title>
+	Event Team | Play USA Ultimate
+</title><meta name="viewport" content="width=device-width" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><link rel="stylesheet" href="/cms/includes/style-new.css" />
+	<script src="/cms/includes/modernizr-1.7.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="/cms/includes/jquery/jquery-1.8.2.js"%3E%3C/script%3E'))</script>
+	<script src="/cms/includes/jquery-core-plugins.js"></script>
+
+    <script type="text/javascript">
+       /* <![CDATA[ */
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-6731123-9']);
+        _gaq.push(['_trackPageview']);
+
+        
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+     /* ]]> */
+    </script>
+    
+
+<script type="text/javascript">
+    var intrvl = 1000;
+    var sec = 60000;
+    var min = 3000 * sec;
+    //var min = 525600 * sec;
+    var warn = 3 * sec;
+    setInterval("checkSessionTime();", intrvl);
+    function checkSessionTime() {
+        min -= intrvl;
+        var rm = parseInt(min / sec);
+        var rs = parseInt((min - (rm * sec)) / 1000);
+        if (min <= 0) {
+            renewMemberSession(true);
+        } else {
+            var html = "Your session will expire in ";
+            if (rm > 3) {
+                rm += 1;
+                html += "<b>" + rm + "</b> minutes";
+            } else if (rm > 1) {
+                html += "<b>" + rm + "</b> minutes and <b>" + rs + "</b> seconds";
+            } else if (rm == 1) {
+                html += "<b>" + rm + "</b> minute and <b>" + rs + "</b> seconds";
+            } else {
+                html += "<b>" + rs + "</b> seconds";
+            }
+
+            if (min % 10000 == 0) renewMemberSession(true); // every 10 seconds lets refresh the session, but don't reset the javascript timer
+        }
+    }
+    function renewMemberSession(skipRenew) {
+        $.getJSON("/ajax/ajax.aspx?F=ExtendSessionForMembers", function (o) {
+            if (!o.Success) {
+                logout();
+            } else {
+                if (!skipRenew) resetSession();
+            }
+        });
+    }
+    //function logout() { $("#expires").html("<b>Your session has expired. Logging off...</b>"); try {$("#SessionTimeout").jqmShow().center();} catch(ex){} setTimeout("window.location = '/admin/logout.aspx';", 5000); }
+    function resetSession() { min = 3000 * sec; }
+    </script></head>
+<body class="body">
+	<form name="main" method="post" action="/teams/events/Eventteam/?TeamId=LGNsi6SAW1TIQlMqzRqYBiQnsWNYTXPdkSxtEVu3vwc%3d" id="main">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['main'];
+if (!theForm) {
+    theForm = document.main;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=i5ck2ufDXIhadxg4dsGOEf3fXipNAQ_A1NLk9jjpAL5POZR-ir_naSt09Eey0cWzV4fmgYVpkQKxI9KSU6-zbFewtKU1&amp;t=636041098940000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=0r4fr6qomX5lBFoVYil_rOOMSWXziFFsp3l0InvXwxsLYFq-AWOCEiJZqtzkNF3VQjc3KuDtbi0DYF6CFai9abRZOms5yMLR3HEmiNGeCK2IRWyzj-wlPYf0USRjrLk7K0YxMiAsoxpHKt36-d5PWtrsQfQ1&amp;t=fffffffffa2fd9a5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Hm_x2S_fBLgiK2CaACCam2sEA5HlAPwKLJ5y49ZjsuK3ci8BYuiAy1XnMO22XIna1Sfhw1Y5QxSnt4XkUuYuCTLheA0jcltnndBgGCDWZRf9cFYrp1T4Lch6cho4egZmfrdLABd4CVo3ulmyY4lTTNNpvX1PUV-lx5IcYQLL2N3ZJqQC0&amp;t=fffffffffa2fd9a5" type="text/javascript"></script>
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sm', document.getElementById('main'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+
+	<div id="wrapper">
+		<header id="main_header">
+			
+
+<div id="logoArea">
+	<span class="logo"><a href="http://www.usaultimate.org" target="_blank"><img src="/cms/images/layout/logo.png" alt="USA Ultimate"/></a></span>
+	<span class="slogan"><img src="/cms/images/layout/slogan.png" alt="Account Management"/></span>
+	<!-- Needs to be switched to account_header.png -->
+</div>
+
+
+<nav class="mainNav">
+	<ul class="sf-menu clearfix">
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl00_liItem" class="firstnavitemli">
+             <a href="https://www.usaultimate.org/about/ultimate/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_lnkLink1" class="firstnavitema">About</a>
+             
+             
+<ul>
+
+<li>
+    <a href="https://www.usaultimate.org/about/contact_us/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_lnk" style="">Contact Us</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/board_of_directors.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl01_lnkInner" style="">Board of Directors</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/hq_staff.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl02_lnkInner" style="">USA Ultimate Staff</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/youth_division.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl03_lnkInner" style="">Youth Division</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/college_division.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl04_lnkInner" style="">College Division</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/club_division.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl05_lnkInner" style="">Club Division</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/masters_division.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl06_lnkInner" style="">Masters Division</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/contact_us/beach_division.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl07_lnkInner" style="">Beach Division</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/affiliates/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl08_lnkInner" style="">USA Ultimate Affiliates</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/local/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl02_lnk" style="">Where to Play</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/ultimate/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl03_lnk" style="">About Ultimate</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/ultimate/spirit_of_the_game.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl01_lnkInner" style="">Spirit of the Game</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/usaultimate/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl04_lnk" style="">About USA Ultimate</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/annual_report.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl01_lnkInner" style="">Annual Report (2016)</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/get_involved.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl02_lnkInner" style="">Volunteer & Job Opportunities</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/equity/" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl05_lnk" style="">Equity and Diversity</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/usaultimate/governance/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl06_lnk" style="">Governance</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/governance/bylaws.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl01_lnkInner" style="">Bylaws (2014)</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/thefuture.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl02_lnkInner" style="">Strategic Plan (2013-2018)</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/history/hall_of_fame/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl07_lnk" style="">Hall of Fame</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/archives/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl08_lnk" style="">History / Archives</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/sponsorship/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl09_lnk" style="">Sponsorship</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/faq/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_rptSubNav_ctl10_lnk" style="">FAQs</a>
+    
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl00$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl00_ccSubNav_hdn" value="6" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl01_liItem">
+             <a href="https://www.usaultimate.org/news/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_lnkLink1">News</a>
+             
+             
+<ul>
+
+<li>
+    <a id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl01_lnk" style="">USA Ultimate Mobile App</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://itunes.apple.com/us/app/usa-ultimate/id1032772331?mt=8" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl01_lnkInner" style="">iOS</a>
+         </li>
+        
+         <li>
+            <a href="https://play.google.com/store/apps/details?id=org.usaultimate.usaultimate&hl=en" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl02_lnkInner" style="">Android</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/multimedia/usa_ultimate_magazine/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl02_lnk" style="">USA Ultimate Magazine</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/multimedia/usa_ultimate_magazine/usa_ultimate_magazine_2016_spring.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl01_lnkInner" style="">2016 Spring issue</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/multimedia/usa_ultimate_magazine/usa_ultimate_magazine_2015_summer.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl02_lnkInner" style="">2015 Summer issue</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/multimedia/usa_ultimate_magazine/usa_ultimate_magazine_2015_fall.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl03_lnkInner" style="">2015 Fall Issue</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/multimedia/usa_ultimate_magazine/usa_ultimate_magazine_2015_winter.aspx" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl04_lnkInner" style="">2015 Winter Issue</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/teams/events/rankings/" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_lnk" style="">Rankings</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://play.usaultimate.org/teams/events/team_rankings/?RankSet=College-Men" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl01_lnkInner" style="">College Men's</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/teams/events/team_rankings/?RankSet=College-Women" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl02_lnkInner" style="">College Women's</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/teams/events/team_rankings/?RankSet=Club-Men" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl03_lnkInner" style="">TCT Men's</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/teams/events/team_rankings/?RankSet=Club-Mixed" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl04_lnkInner" style="">TCT Mixed</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/teams/events/team_rankings/?RankSet=Club-Women" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl05_lnkInner" style="">TCT Women's</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=18" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl04_lnk" style="">USA Ultimate Weekly</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=5" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl05_lnk" style="">College News</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=6" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl06_lnk" style="">Triple Crown Tour News</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=19" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl07_lnk" style="">Beach News</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=7" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl08_lnk" style="">Youth News</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/news/default.aspx?CategoryId=10" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl09_lnk" style="">National Teams News</a>
+    
+</li>
+
+<li>
+    <a href="https://www.youtube.com/user/usaultimate" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_rptSubNav_ctl10_lnk" style="">Videos</a>
+    
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl01$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl01_ccSubNav_hdn" value="25" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl02_liItem">
+             <a href="https://play.usaultimate.org/" id="CT_Header_CC_TopNav_rptNav_ctl02_lnkLink1">Events</a>
+             
+             
+<ul>
+
+<li>
+    <a href="https://play.usaultimate.org/events/tournament/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl01_lnk" style="">Tournament Calendar</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/league/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl01_lnkInner" style="">League Calendar</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/archives/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_lnk" style="">Event Archives ('79-'16)</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2017.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl01_lnkInner" style="">2017</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2016.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl02_lnkInner" style="">2016</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2015.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl03_lnkInner" style="">2015</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2014.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl04_lnkInner" style="">2014</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2013.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl05_lnkInner" style="">2013</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2012.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl06_lnkInner" style="">2012</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2011.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl07_lnkInner" style="">2011</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2010.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl08_lnkInner" style="">2010</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2009.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl09_lnkInner" style="">2009</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2008.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl10_lnkInner" style="">2008</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2007.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl11_lnkInner" style="">2007</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2006.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl12_lnkInner" style="">2006</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2005.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl13_lnkInner" style="">2005</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2004.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl14_lnkInner" style="">2004</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2003.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl15_lnkInner" style="">2003</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2002.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl16_lnkInner" style="">2002</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2001.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl17_lnkInner" style="">2001</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/2000.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl18_lnkInner" style="">2000</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1999.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl19_lnkInner" style="">1999</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1998.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl20_lnkInner" style="">1998</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1997.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl21_lnkInner" style="">1997</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1996.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl22_lnkInner" style="">1996</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1995.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl23_lnkInner" style="">1995</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1994.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl24_lnkInner" style="">1994</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1993.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl25_lnkInner" style="">1993</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1992.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl26_lnkInner" style="">1992</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1991.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl27_lnkInner" style="">1991</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1990.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl28_lnkInner" style="">1990</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1989.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl29_lnkInner" style="">1989</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1988.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl30_lnkInner" style="">1988</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1987.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl31_lnkInner" style="">1987</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1986.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl32_lnkInner" style="">1986</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1985.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl33_lnkInner" style="">1985</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1984.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl34_lnkInner" style="">1984</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1983.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl35_lnkInner" style="">1983</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1982.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl36_lnkInner" style="">1982</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1981.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl37_lnkInner" style="">1981</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1980.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl38_lnkInner" style="">1980</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/archives/1979.aspx" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl39_lnkInner" style="">1979</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/2018-USA-Ultimate-Beach-Championships/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl03_lnk" style="">Beach Championships</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/2018-USA-Ultimate-Beach-Westerns/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl04_lnk" style="">Beach Westerns</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/youth/default.aspx#season_hs" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl05_lnk" style="">H.S. States</a>
+    
+</li>
+
+<li>
+    <a href="http://usopen.usaultimate.org/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl06_lnk" style="">YCC</a>
+    
+</li>
+
+<li>
+    <a href="http://collegechampionships.usaultimate.org" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl07_lnk" style="">D-III College</a>
+    
+</li>
+
+<li>
+    <a href="http://collegechampionships.usaultimate.org" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl08_lnk" style="">D-I College</a>
+    
+</li>
+
+<li>
+    <a href="http://usopen.usaultimate.org" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl09_lnk" style="">U.S. Open</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/TCT-Elite-Select-Challenge-2018" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl10_lnk" style="">Elite-Select Challenge</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/TCT-Pro-Elite-Challenge-2018" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl11_lnk" style="">Pro-Elite Challenge</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/TCT-Select-Flight-Invite-2018" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl12_lnk" style="">Select Flight Invite</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/TCT-Pro-Championships-2018" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl13_lnk" style="">Pro Championships</a>
+    
+</li>
+
+<li>
+    <a href="http://tct.usaultimate.org/national-championships/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl14_lnk" style="">National Championships</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/2018-USA-Ultimate-Masters-Championships" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl15_lnk" style="">Masters Championships</a>
+    
+</li>
+
+<li>
+    <a href="https://play.usaultimate.org/events/tournament/?ViewAll=false&IsLeagueType=false&IsClinic=false&FilterByCategory=AE&EventName=youth%20fall%20cup" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl16_lnk" style="">Youth Fall Cups</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/2018-Central-Youth-Fall-Cup/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl16_rptSubSubNav_ctl01_lnkInner" style="">Central Youth Fall Cup</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/2018-Northeastern-Youth-Fall-Cup/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl16_rptSubSubNav_ctl02_lnkInner" style="">Northeastern Youth Fall Cup</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/2018-Southern-Youth-Fall-Cup/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl16_rptSubSubNav_ctl03_lnkInner" style="">Southern Youth Fall Cup</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/2018-Western-Youth-Fall-Cup/" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_rptSubNav_ctl16_rptSubSubNav_ctl04_lnkInner" style="">Western Youth Fall Cup</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl02$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl02_ccSubNav_hdn" value="144" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl03_liItem">
+             <a id="CT_Header_CC_TopNav_rptNav_ctl03_lnkLink1">Competition Divisions</a>
+             
+             
+<ul>
+
+<li>
+    <a href="https://www.usaultimate.org/youth/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl01_lnk" style="">Youth Division</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/youth/guidelines.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl01_lnkInner" style="">Youth Guidelines (2018)</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/college/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl02_lnk" style="">College Division</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/college/eligibility.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl01_lnkInner" style="">College Eligibility</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/college/guidelines.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl02_lnkInner" style="">College Guidelines (2018)</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/college/college_mixed_guidelines.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl03_lnkInner" style="">College Mixed Guidelines (2017)</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/organizer_resources/college_development.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl02_rptSubSubNav_ctl04_lnkInner" style="">College Resources</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/triplecrowntour/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl03_lnk" style="">Club Division (Triple Crown Tour)</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/triplecrowntour/guidelines.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl01_lnkInner" style="">TCT Guidelines (2018)</a>
+         </li>
+        
+         <li>
+            <a href="https://play.usaultimate.org/events/2017-US-Open-Club-Championships" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl02_lnkInner" style="">U.S. Open Club Championships</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/masters/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl04_lnk" style="">Masters Division</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/masters_guidelines/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl01_lnkInner" style="">Masters Guidelines (2018)</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/beach/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl05_lnk" style="">Beach Division</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/beach/guidelines.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl05_rptSubSubNav_ctl01_lnkInner" style="">Beach Guidelines (2018)</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/about/usaultimate/international/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_lnk" style="">USA Ultimate National Teams</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/international/wjuc_2016.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl01_lnkInner" style="">2016 WJUC</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/international/wugc_2016.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl02_lnkInner" style="">2016 WUGC</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/international/wcbu_2017.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl03_lnkInner" style="">2017 WCBU</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about/usaultimate/international/world_games_2017.aspx" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl04_lnkInner" style="">2017 World Games</a>
+         </li>
+        
+         <li>
+            <a href="http://nationalteam.usaultimate.org/u24/" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_rptSubNav_ctl06_rptSubSubNav_ctl05_lnkInner" style="">2018 WU24</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl03$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl03_ccSubNav_hdn" value="26" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl04_liItem">
+             <a id="CT_Header_CC_TopNav_rptNav_ctl04_lnkLink1">Programs</a>
+             
+             
+<ul>
+
+<li>
+    <a href="https://www.usaultimate.org/about/affiliates/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_lnk" style="">Affiliates</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/about_affiliation/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl01_lnkInner" style="">About Affiliation</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/become_an_affiliate/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl02_lnkInner" style="">Apply for Affiliation</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/affiliateprograms/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl03_lnkInner" style="">Benefits of Affiliation</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/CurrentAffiliates/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl04_lnkInner" style="">Current Affiliate Contacts</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/affiliate_events/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl05_lnkInner" style="">Event Registration</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/affiliatefaq/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl06_lnkInner" style="">FAQ re: Affiliation</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/affiliategrants/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl07_lnkInner" style="">Grants for Affiliates</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/affiliate_recognition/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl08_lnkInner" style="">Top Affiliates</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/organizer_resources/articles.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl01_rptSubSubNav_ctl09_lnkInner" style="">Written Resources & Guides</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/camps/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl02_lnk" style="">Camps</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/chaperones/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl03_lnk" style="">Chaperones</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/youth_requirements/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl03_rptSubSubNav_ctl01_lnkInner" style="">Youth Safety</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/coaching/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl04_lnk" style="">Coaching</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/coaching/cdp/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl01_lnkInner" style="">Coaching Development Program</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/athlete_protection.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl02_lnkInner" style="">Athlete Protection</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/sanctioning/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl05_lnk" style="">Event Sanctioning & Insurance</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/sanctioning/leagues.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl05_rptSubSubNav_ctl01_lnkInner" style="">League Sanctioning</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/sanctioning/tournaments.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl05_rptSubSubNav_ctl02_lnkInner" style="">Tournament Sanctioning</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/insurance_program/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl05_rptSubSubNav_ctl03_lnkInner" style="">Practice Insurance</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="http://gum.usaultimate.org/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl06_lnk" style="">Girls' Ultimate Movement (GUM)</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/learntoplay/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl07_lnk" style="">Learn to Play</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/conventions" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl08_lnk" style="">National Conventions</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/grants/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl09_lnk" style="">New Start Grant Kits</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/organizer_resources/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_lnk" style="">Organizer Resources</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/champ_events/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl01_lnkInner" style="">Bid to Host USA Ultimate Events</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/tdcp/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl02_lnkInner" style="">Tournament Director's Certification Program</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/organizer_resources/ultimate_in_schools.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl03_lnkInner" style="">Youth & Education Resources</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/organizer_resources/college_development.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl04_lnkInner" style="">College Development</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/organizer_resources/community_ultimate_development.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl05_lnkInner" style="">Ultimate in Your Community</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/development/women/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl10_rptSubSubNav_ctl06_lnkInner" style="">Women's Development</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/parent_resources.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl11_lnk" style="">Parent Resources</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/officiating/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl12_lnk" style="">Rules & Officiating</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/officiating/rules/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl12_rptSubSubNav_ctl01_lnkInner" style="">Rules</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/officiating/observers/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl12_rptSubSubNav_ctl02_lnkInner" style="">Observer Certification Program</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/resources/disc_standards.aspx" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl12_rptSubSubNav_ctl03_lnkInner" style="">Disc Standards</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/stateorgs/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl13_lnk" style="">State-Based Organizations</a>
+    
+        <ul>
+        
+         <li>
+            <a href="https://www.usaultimate.org/stateorgreqs/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl13_rptSubSubNav_ctl01_lnkInner" style="">SBO Benefits & Requirements</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/stateorgfaq/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl13_rptSubSubNav_ctl02_lnkInner" style="">SBO FAQ</a>
+         </li>
+        
+         <li>
+            <a href="https://www.usaultimate.org/contactstateorgs/" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_rptSubNav_ctl13_rptSubSubNav_ctl03_lnkInner" style="">SBO Contacts</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl04$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl04_ccSubNav_hdn" value="27" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl05_liItem">
+             <a href="https://www.usaultimate.org/membership/default.aspx" id="CT_Header_CC_TopNav_rptNav_ctl05_lnkLink1">Membership</a>
+             
+             
+<ul>
+
+<li>
+    <a href="/members/" id="CT_Header_CC_TopNav_rptNav_ctl05_ccSubNav_rptSubNav_ctl01_lnk" style="">Online Account Access</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/membership/default.aspx#Registration_Forms" id="CT_Header_CC_TopNav_rptNav_ctl05_ccSubNav_rptSubNav_ctl02_lnk" style="">Registration Forms</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/membership/play_it_forward.aspx" id="CT_Header_CC_TopNav_rptNav_ctl05_ccSubNav_rptSubNav_ctl03_lnk" style="">Play It Forward</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/membership/signature_series.aspx" id="CT_Header_CC_TopNav_rptNav_ctl05_ccSubNav_rptSubNav_ctl04_lnk" style="">Signature Series Disc</a>
+    
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl05$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl05_ccSubNav_hdn" value="28" />
+        </li>
+	
+        <li id="CT_Header_CC_TopNav_rptNav_ctl06_liItem" class="lastnavitemli">
+             <a href="http://shop.usaultimate.org/" id="CT_Header_CC_TopNav_rptNav_ctl06_lnkLink1" class="lastnavitema">Shop</a>
+             
+             
+<ul>
+
+<li>
+    <a href="https://www.usaultimate.org/merchandise/" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl01_lnk" style="">USAU Merchandise</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/shop/additional_merchandise.aspx" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl02_lnk" style="">Licensed Merchandise</a>
+    
+</li>
+
+<li>
+    <a href="https://www.usaultimate.org/resources/disc_standards.aspx" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl03_lnk" style="">Approved Discs</a>
+    
+</li>
+
+<li>
+    <a href="http://usaultimate.teamfanshop.com/" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_lnk" style="" target="_blank">Apparel & Accessories</a>
+    
+        <ul>
+        
+         <li>
+            <a href="http://usaultimate.teamfanshop.com/Mens" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl01_lnkInner" style="" target="_blank">Men</a>
+         </li>
+        
+         <li>
+            <a href="http://usaultimate.teamfanshop.com/Ladies" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl02_lnkInner" style="" target="_blank">Women</a>
+         </li>
+        
+         <li>
+            <a href="http://usaultimate.teamfanshop.com/Kids" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl03_lnkInner" style="" target="_blank">Kids</a>
+         </li>
+        
+         <li>
+            <a href="http://usaultimate.teamfanshop.com/T-Shirts" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl04_lnkInner" style="" target="_blank">T-Shirts</a>
+         </li>
+        
+         <li>
+            <a href="http://usaultimate.teamfanshop.com/Sweatshirts_And_Fleece" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_rptSubNav_ctl04_rptSubSubNav_ctl05_lnkInner" style="" target="_blank">Sweats</a>
+         </li>
+        
+        </ul>
+        
+</li>
+
+</ul>
+
+<input type="hidden" name="CT_Header$CC_TopNav$rptNav$ctl06$ccSubNav$hdn" id="CT_Header_CC_TopNav_rptNav_ctl06_ccSubNav_hdn" value="29" />
+        </li>
+	
+	</ul>
+</nav>
+
+
+
+
+
+                        
+
+<div class="login_area">
+    
+	<div id="CT_LoginBar_0_login_buttons" class="login_buttons">
+        <img src="/cms/images/icons/usoc_new_logo.png" width="160" />
+        <br/>
+		<a href="/members/login/" class="btn">Member Account</a>
+		
+	</div>
+	
+</div>
+
+
+		</header>
+		<div id="container" class="clearfix">
+			<div id="main_col" class="column">
+				<div class="headingBox">
+					
+
+<div class="breadcrumbs_area">
+	<div id="CT_Heading_0_breadcrumb" class="breadcrumbs">
+		<span class="bread_links"><a href="/members/">Home</a><span class="default">&gt;</span></span><span class="bread_page">Event Team</span>
+	</div>
+</div>
+
+				</div>
+				
+				
+
+<div class="section_header has-link clearfix">
+    <h2 class="title">
+        Club - Men</h2>
+        <a id="CT_Main_0_lnkHome" class="btn back" href="/teams/events/rankings/">Go Back</a>
+</div>
+<div class="profile_area event-profile clearfix">
+    <div class="profile_img">
+        <img id="CT_Main_0_ImgTeamImage" src="/assets/TeamPictures/lion_on_horse.jpg" alt="Team Image" style="border-width:0px;" />
+    </div>
+    <div class="profile_info">
+		<h4>
+			PoNY
+		</h4>
+		<p id="CT_Main_0_dlCity" class="team_city">
+			New York,New York
+		</p>
+		<dl id="CT_Main_0_dlCompetitionLevel">
+			<dt>Competition Level:</dt>
+			<dd>
+				Club</dd>
+		</dl>
+		<dl id="CT_Main_0_dlGenderDivision">
+			<dt>Gender Division:</dt>
+			<dd>
+				Men</dd>
+		</dl>
+		<dl id="CT_Main_0_dlHeadCoach">
+			<dt>Head Coach:</dt>
+			<dd>
+				Ben (Berend) Van Heuvelen, Bryan Jones</dd>
+		</dl>
+		<dl id="CT_Main_0_dlAsstCoach">
+			<dt>Asst.Coach:</dt>
+			<dd>
+				James Leppert</dd>
+		</dl>
+		
+        <dl id="CT_Main_0_dlFacebook">
+			<dt>Facebook:</dt>
+			<dd><a id="CT_Main_0_lnkFacebook" href="https://www.facebook.com/ponyultimate">https://www.facebook.com/ponyultimate</a></dd>
+		</dl>
+		<dl id="CT_Main_0_dlTwitter">
+			<dt>Twitter:</dt>
+			<dd><a id="CT_Main_0_lnkTwitter" href="https://twitter.com/PrideofNY">https://twitter.com/PrideofNY</a></dd>
+		</dl>
+        
+	</div>
+    <div class="profile_logo">
+        <img id="CT_Main_0_ImgTeamLogo" src="/assets/TeamLogos/pony_logo1.jpg" alt="Team Logo" style="border-width:0px;" />
+    </div>
+</div>
+<div id="roster_list">
+    <h3 class="section_header">
+        Player Roster
+    </h3>
+    <div>
+	<span class="smaller"></span><table class="global_table" cellspacing="0" cellpadding="0" border="0" id="CT_Main_0_gvList" style="border-color:#CDD5DE;border-width:1px;border-style:Solid;border-collapse:collapse;">
+		<tr valign="top">
+			<th scope="col">No.</th><th scope="col">Player</th><th scope="col">Position</th><th scope="col">Height</th><th scope="col">Points</th><th scope="col">Assists</th><th scope="col">Ds</th><th scope="col">Turns</th>
+		</tr><tr class="row" valign="top">
+			<td align="center">&nbsp;</td><td align="center">Chris Kocher</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl02_lblPoints">16</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl02_lblAssists">16</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl02_lblDs">5</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl02_lblTurns">7</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Brendan Chin</td><td align="center">Handler</td><td align="center">4'5&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl03_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl03_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl03_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl03_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Saul Graves</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl04_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl04_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl04_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl04_lblTurns"></span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Charlie Holtz</td><td align="center">&nbsp;</td><td align="center">6'4&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl05_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl05_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl05_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl05_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Ben Jagt</td><td align="center">&nbsp;</td><td align="center">6'4&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl06_lblPoints">21</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl06_lblAssists">8</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl06_lblDs">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl06_lblTurns">3</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Benjamin Katz</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl07_lblPoints">5</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl07_lblAssists">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl07_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl07_lblTurns">2</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Beaufort Kittredge</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl08_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl08_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl08_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl08_lblTurns"></span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Alexander Ladomatos</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl09_lblPoints">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl09_lblAssists">12</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl09_lblDs">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl09_lblTurns">6</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Jimmy Mickle</td><td align="center">&nbsp;</td><td align="center">6'3&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl10_lblPoints">11</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl10_lblAssists">31</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl10_lblDs">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl10_lblTurns">14</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Anthony Prato</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl11_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl11_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl11_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl11_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Michael Rice</td><td align="center">&nbsp;</td><td align="center">5'11&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl12_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl12_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl12_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl12_lblTurns"></span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Joshua Stevens-Stein</td><td align="center">&nbsp;</td><td align="center">5'9&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl13_lblPoints">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl13_lblAssists">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl13_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl13_lblTurns">1</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">0</td><td align="center">Gabe Stump</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl14_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl14_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl14_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl14_lblTurns"></span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">0</td><td align="center">Noriaki To</td><td align="center">&nbsp;</td><td align="center">5'10&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl15_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl15_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl15_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl15_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">1</td><td align="center">Markian Kuzmowycz</td><td align="center">&nbsp;</td><td align="center">5'7&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl16_lblPoints">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl16_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl16_lblDs">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl16_lblTurns">2</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">2</td><td align="center">Sean Keegan</td><td align="center">&nbsp;</td><td align="center">5'11&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl17_lblPoints">11</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl17_lblAssists">19</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl17_lblDs">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl17_lblTurns">7</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">4</td><td align="center">Matt Hennessy</td><td align="center">Mid</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl18_lblPoints">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl18_lblAssists">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl18_lblDs">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl18_lblTurns">3</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">6</td><td align="center">Michael Brenner</td><td align="center">Handler</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl19_lblPoints">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl19_lblAssists">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl19_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl19_lblTurns">2</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">7</td><td align="center">Clark Cofer</td><td align="center">&nbsp;</td><td align="center">6'0&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl20_lblPoints">5</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl20_lblAssists">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl20_lblDs">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl20_lblTurns">6</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">8</td><td align="center">Harper Garvey</td><td align="center">&nbsp;</td><td align="center">5'10&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl21_lblPoints">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl21_lblAssists">16</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl21_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl21_lblTurns">10</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">9</td><td align="center">Samuel Little</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl22_lblPoints">20</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl22_lblAssists">15</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl22_lblDs">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl22_lblTurns">6</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">11</td><td align="center">John (Jack) Flintermann</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl23_lblPoints">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl23_lblAssists">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl23_lblDs">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl23_lblTurns">1</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">12</td><td align="center">Matthew Lemar</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl24_lblPoints">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl24_lblAssists">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl24_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl24_lblTurns">2</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">13</td><td align="center">Evan Padget</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl25_lblPoints">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl25_lblAssists">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl25_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl25_lblTurns">2</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">15</td><td align="center">Kevin Norton</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl26_lblPoints">5</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl26_lblAssists">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl26_lblDs">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl26_lblTurns">4</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">16</td><td align="center">Michael Drost</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl27_lblPoints">7</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl27_lblAssists">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl27_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl27_lblTurns">2</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">18</td><td align="center">Tyler Haskell</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl28_lblPoints">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl28_lblAssists">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl28_lblDs">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl28_lblTurns"></span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">19</td><td align="center">Isaac Saul</td><td align="center">Handler</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl29_lblPoints">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl29_lblAssists">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl29_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl29_lblTurns">1</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">22</td><td align="center">Jack Marsh</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl30_lblPoints">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl30_lblAssists">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl30_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl30_lblTurns">7</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">31</td><td align="center">John Wodatch</td><td align="center">&nbsp;</td><td align="center">6'1&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl31_lblPoints">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl31_lblAssists">5</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl31_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl31_lblTurns">4</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">47</td><td align="center">Conrad Schloer</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl32_lblPoints">11</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl32_lblAssists">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl32_lblDs">7</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl32_lblTurns">5</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">50</td><td align="center">Milo Snyder</td><td align="center">&nbsp;</td><td align="center">1'0&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl33_lblPoints">4</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl33_lblAssists">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl33_lblDs">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl33_lblTurns">2</span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">60</td><td align="center">William Dean</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl34_lblPoints">8</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl34_lblAssists">1</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl34_lblDs">3</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl34_lblTurns">3</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">61</td><td align="center">Matthew Weintraub</td><td align="center">Handler</td><td align="center">6'0&quot;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl35_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl35_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl35_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl35_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">97</td><td align="center">Benjamin Spielman</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl36_lblPoints">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl36_lblAssists">7</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl36_lblDs">6</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl36_lblTurns">1</span>
+                </td>
+		</tr><tr class="alt" valign="top">
+			<td align="center">98</td><td align="center">Carter Thallon</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl37_lblPoints"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl37_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl37_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl37_lblTurns"></span>
+                </td>
+		</tr><tr class="row" valign="top">
+			<td align="center">99</td><td align="center">Laurent Loiseau</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl38_lblPoints">2</span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl38_lblAssists"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl38_lblDs"></span>
+                </td><td align="center">
+                    <span id="CT_Main_0_gvList_ctl38_lblTurns"></span>
+                </td>
+		</tr>
+	</table>
+</div>
+</div>
+
+
+			</div>
+			<aside id="right_rail" class="column">
+				
+<div class="mod gray_mod">
+    <div class="mod_header">
+        <h3>
+            Event Schedule and Scores</h3>
+    </div>
+    <div class="mod_content">
+        <table class="schedule_table">
+            <thead>
+                <tr>
+                    <th>
+                        <span id="CT_Right_0_lblEventName"></span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div>
+	<span class="smaller"></span><table class="schedule_table" cellspacing="0" cellpadding="0" border="0" id="CT_Right_0_gvEventScheduleScores" style="border-collapse:collapse;">
+		<tr class="row" valign="top">
+			<td align="left" class="thEventGame" colspan="3" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl02_lblMonth"><a href='/events/TCT-Pro-Elite-Challenge-2018/' target='_blank' style='font-weight:bold;text-decoration:none;border-bottom:1px solid #999;color:#000;'>TCT Pro-Elite Challenge (Colorado Cup) 2018</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl03_lblMonth">July 07</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl03_lblScore"><a href='/teams/events/match_report/?EventGameId=ux%2bisYDn9IuM47VkD2IUw7NLiqKj5MjdnTlGEGw%2fcL8%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>8 - 13</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl03_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=Ig%2b8Cr1%2b%2b9bXTGl%2fKnBNVJ2iaBlM%2bPABLfgSxT3itek%3d' target='_blank'>HIGH FIVE</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl04_lblMonth">July 07</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl04_lblScore"><a href='/teams/events/match_report/?EventGameId=0pHsxLVji3Hs5hQKDG8ErKD3T3rXb8zoU1DbNHSJHOM%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>9 - 11</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl04_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=PUkfm9dYFITzu1hwY0Zp1BD1GqTDrY3ECv3LxZTDDjc%3d' target='_blank'>Pittsburgh Temper</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl05_lblMonth">July 07</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl05_lblScore"><a href='/teams/events/match_report/?EventGameId=oKdRZ3AsSx4fSIUUOoI1%2bqh7MB8Z5J%2bkeBIS%2f7tvJGo%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>9 - 13</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl05_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=%2bF2445LjbMU573RiiAfEfsQZzFMV34D0raTrIcaj1OU%3d' target='_blank'>Sub Zero</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl06_lblMonth">July 08</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl06_lblScore"><a href='/teams/events/match_report/?EventGameId=A6YNrLjjgTuLZalVbLOD2wnAT7t1KdcFdXsnrbN21c8%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>13 - 7</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl06_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=w0MQxFqBvOKiiad4WWhQwkptyxsB8R72SnoazZYoZ1s%3d' target='_blank'>Medicine Men</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl07_lblMonth">July 08</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl07_lblScore"><a href='/teams/events/match_report/?EventGameId=P9oJv8altp%2bvfGXPUTiksQbmZy6RdTscrAjChms3rYE%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>9 - 12</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl07_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=3nVqyscIkz3NaHaDpB9CegTDldUdVd4%2bp75jPZ8ysIA%3d' target='_blank'>Truck Stop</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl08_lblMonth">July 08</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl08_lblScore"><a href='/teams/events/match_report/?EventGameId=mRnBsfVXYJ%2f7kALEEa3DisI1hoxnEKYGrVc12uBhQuA%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>13 - 7</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl08_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=sFshgt39wu8MIsZflRTxKxu5g17LWgiLiVD3mXDpDvE%3d' target='_blank'>Guerrilla</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" class="thEventGame" colspan="3" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl09_lblMonth"><a href='/events/2018-US-Open-Club-Championships/' target='_blank' style='font-weight:bold;text-decoration:none;border-bottom:1px solid #999;color:#000;'>2018 U.S. Open Club Championships</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl10_lblMonth">August 03</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl10_lblScore"><a href='/teams/events/match_report/?EventGameId=skcUUjWVr4B9JgpAZwihb4BrmJmvIpp5mch9KEf0DRs%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>14 - 9</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl10_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=Kt%2bb1NKK7I%2fSGqlYGTPdaXnOaBBHkvIcL45PFn%2bNd5s%3d' target='_blank'>Bunka Shutter Buzz Bullets</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl11_lblMonth">August 03</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl11_lblScore"><a href='/teams/events/match_report/?EventGameId=Ox4A5GEmc4RBfCt77Rp87KFtOEPMOj7mX91%2bXnaJGrk%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>9 - 15</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl11_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=2UjdWWdIxXQyMhaUcaq9D00krxR0uYSJT2SiwEvvg2I%3d' target='_blank'>Revolver</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl12_lblMonth">August 03</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl12_lblScore"><a href='/teams/events/match_report/?EventGameId=1XXfz%2fd84ocqqFDnYXz6FWmbCgpAY1o2PAa6Q423Hno%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 2</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl12_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=OYgEnoLQLil%2b1DUTiJYzMRR2qlbfc%2f1jn4Xv289Rpns%3d' target='_blank'>Osaka Spirits </a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl13_lblMonth">August 04</span>
+                    </td><td align="left" class="loss" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl13_lblScore"><a href='/teams/events/match_report/?EventGameId=R8qty%2fWwTQeCc%2bkDGvI1E5fl2jdGcW1WUxzJeP9s4Uc%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>12 - 15</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl13_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=wLMJ2eIlZ4C3eAYKZvdDaGVz0U5O3t5Pi1s0qRSeiF4%3d' target='_blank'>Doublewide</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl14_lblMonth">August 04</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl14_lblScore"><a href='/teams/events/match_report/?EventGameId=HqDMZAH9z3qCuJp5J00A1369OkV0jFsRL2MqRhhNQ94%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>14 - 12</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl14_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=3nVqyscIkz3NaHaDpB9CegTDldUdVd4%2bp75jPZ8ysIA%3d' target='_blank'>Truck Stop</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl15_lblMonth">August 04</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl15_lblScore"><a href='/teams/events/match_report/?EventGameId=UU2d3BH9kaaS58h6f%2f2HvKstICsl5tW4EVURM%2bhf6yQ%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 13</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl15_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=kvKCntB7CN05CpfnyZhGX3skuzbh1bM6z6RgQEnKVfg%3d' target='_blank'>Ring of Fire</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl16_lblMonth">August 05</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl16_lblScore"><a href='/teams/events/match_report/?EventGameId=CmcvTtFH4EK%2fggBRS%2bc95uDUuSMDlSvzD06wsSm3%2bH8%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>14 - 8</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl16_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=%2bF2445LjbMU573RiiAfEfsQZzFMV34D0raTrIcaj1OU%3d' target='_blank'>Sub Zero</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" class="thEventGame" colspan="3" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl17_lblMonth"><a href='/events/TCT-Pro-Championships-2018/' target='_blank' style='font-weight:bold;text-decoration:none;border-bottom:1px solid #999;color:#000;'>TCT Pro Championships 2018</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl18_lblMonth">September 01</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl18_lblScore"><a href='/teams/events/match_report/?EventGameId=Ijis0t4L9gsz%2bxA6LZ3y73aNC1c6KDGUszodTPZPhEk%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>12 - 11</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl18_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=YLxRg81zgYhtCVVumqx2z0Kq8qbjZZKwAT76pSN09Cc%3d' target='_blank'>Chicago Machine</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl19_lblMonth">September 01</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl19_lblScore"><a href='/teams/events/match_report/?EventGameId=hSyy6ZhWQmK0HVf%2f2kUjXnfLYGwXKBJ9hYwxLaXrMSg%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 10</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl19_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=genIaP0Lw%2f7%2fNsxZSG%2fwDer3QPm4CVxU3ljC1dORyWU%3d' target='_blank'>Patrol</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl20_lblMonth">September 01</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl20_lblScore"><a href='/teams/events/match_report/?EventGameId=97IWKW773Hh3VZPi68o%2bXjUT9XyrijVk%2bQtukbadBWI%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 10</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl20_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=r1CQMXZYOOp3yGt6RSDGEOXxIIEcnucyzDyqUBjJ0mM%3d' target='_blank'>Johnny Bravo</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl21_lblMonth">September 02</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl21_lblScore"><a href='/teams/events/match_report/?EventGameId=Fa9Q0m23D%2fYeKeqV1NAB%2fjgOt7yHKZcEQb4Ry0%2bpnDA%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 14</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl21_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=kvKCntB7CN05CpfnyZhGX3skuzbh1bM6z6RgQEnKVfg%3d' target='_blank'>Ring of Fire</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl22_lblMonth">September 02</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl22_lblScore"><a href='/teams/events/match_report/?EventGameId=MuQuM3cwYhv0orfTZFVhYJIhyKyp%2fsxhuFgCBeONuHA%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>14 - 10</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl22_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=3nVqyscIkz3NaHaDpB9CegTDldUdVd4%2bp75jPZ8ysIA%3d' target='_blank'>Truck Stop</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl23_lblMonth">September 03</span>
+                    </td><td align="left" class="win" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl23_lblScore"><a href='/teams/events/match_report/?EventGameId=D5oDMBBr4u8ZjUq%2bhQWdY2IgrzrEqn4O5TpIF9qtH9Q%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'>15 - 12</a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl23_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=2UjdWWdIxXQyMhaUcaq9D00krxR0uYSJT2SiwEvvg2I%3d' target='_blank'>Revolver</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" class="thEventGame" colspan="3" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl24_lblMonth"><a href='/events/Northeast-Mens-Regional-Championship-2018/' target='_blank' style='font-weight:bold;text-decoration:none;border-bottom:1px solid #999;color:#000;'>Northeast Men's Regional Championship</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl25_lblMonth">N/A</span>
+                    </td><td align="left" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl25_lblScore"><a href='/teams/events/match_report/?EventGameId=K2URfMt92DwURjmzUvRL%2bVZstDB%2bq%2bOejW5mXOqh0uk%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'></a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl25_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=hk6uisTwzfpHPokmA4LhRDOWWZYmb4UDDJROLPXvkt8%3d' target='_blank'>Deathsquad</a></span>
+                    </td>
+		</tr><tr class="row" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl26_lblMonth">N/A</span>
+                    </td><td align="left" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl26_lblScore"><a href='/teams/events/match_report/?EventGameId=vAWz8FhVjkpMtgENc%2fXHUWL2FYNMiFdXeU01zlJ%2fMSg%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'></a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl26_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=bsmJ7Vwl2iDdFG8vvjy9Th1mXtyQttdU4qqZyzNYQ3o%3d' target='_blank'>Baked Beans</a></span>
+                    </td>
+		</tr><tr class="alt" valign="top">
+			<td align="left" style="width:70px;">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl27_lblMonth">N/A</span>
+                    </td><td align="left" style="width:40px;">
+                    <span id="CT_Right_0_gvEventScheduleScores_ctl27_lblScore"><a href='/teams/events/match_report/?EventGameId=2ixM3lJZouoZzJDWLdsV9vw3ES41XzShxoLp86Itcuw%3d' target='_blank' style='color:#222;text-decoration:none;border-bottom:1px solid #888;'></a></span>
+                    </td><td align="left">
+                        <span id="CT_Right_0_gvEventScheduleScores_ctl27_lblOpponentTeamName"><a href='/teams/events/Eventteam/?TeamId=akqGpX0sxWpIvXasn%2fRfDgV%2fGJFSdZHeR33JJPDXKhE%3d' target='_blank'>Shade</a></span>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+</div>
+
+
+
+<div class="mod blue_mod has_tabs tabbed_mod">
+	<div class="mod_header">
+		<h3><span id="CT_Right_1_lblHeading">PoNY</span></h3>
+	</div>
+
+	<div class="mod_contents">
+		<ul class="tabs">
+			<li class="active"><a href="#">Goals</a></li>
+			<li><a href="#">Assists</a></li>
+		</ul>
+
+		<div class="slides">
+			<div class="slide">
+				<div>
+	<span class="smaller"></span><table class="global_table" cellspacing="0" cellpadding="0" border="0" id="CT_Right_1_gvListGoals" style="border-collapse:collapse;">
+		<tr valign="top">
+			<th scope="col">Players</th><th scope="col">Goals</th>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl02_lblPlayer" title="PoNY">Ben Jagt</span>
+                         </td><td align="center">21</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl03_lblPlayer" title="PoNY">Samuel Little</span>
+                         </td><td align="center">20</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl04_lblPlayer" title="PoNY">Chris Kocher</span>
+                         </td><td align="center">16</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl05_lblPlayer" title="PoNY">Conrad Schloer</span>
+                         </td><td align="center">11</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl06_lblPlayer" title="PoNY">Jimmy Mickle</span>
+                         </td><td align="center">11</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl07_lblPlayer" title="PoNY">Sean Keegan</span>
+                         </td><td align="center">11</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl08_lblPlayer" title="PoNY">William Dean</span>
+                         </td><td align="center">8</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl09_lblPlayer" title="PoNY">Michael Drost</span>
+                         </td><td align="center">7</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl10_lblPlayer" title="PoNY">Benjamin Spielman</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl11_lblPlayer" title="PoNY">Harper Garvey</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl12_lblPlayer" title="PoNY">Tyler Haskell</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl13_lblPlayer" title="PoNY">Markian Kuzmowycz</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl14_lblPlayer" title="PoNY">Clark Cofer</span>
+                         </td><td align="center">5</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl15_lblPlayer" title="PoNY">Kevin Norton</span>
+                         </td><td align="center">5</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl16_lblPlayer" title="PoNY">Benjamin Katz</span>
+                         </td><td align="center">5</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl17_lblPlayer" title="PoNY">Milo Snyder</span>
+                         </td><td align="center">4</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl18_lblPlayer" title="PoNY">Alexander Ladomatos</span>
+                         </td><td align="center">4</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl19_lblPlayer" title="PoNY">Joshua Stevens-Stein</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl20_lblPlayer" title="PoNY">Isaac Saul</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl21_lblPlayer" title="PoNY">Michael Brenner</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl22_lblPlayer" title="PoNY">Jack Marsh</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl23_lblPlayer" title="PoNY">Matthew Lemar</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl24_lblPlayer" title="PoNY">John Wodatch</span>
+                         </td><td align="center">2</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl25_lblPlayer" title="PoNY">Laurent Loiseau</span>
+                         </td><td align="center">2</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl26_lblPlayer" title="PoNY">Evan Padget</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl27_lblPlayer" title="PoNY">John (Jack) Flintermann</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl28_lblPlayer" title="PoNY">Matt Hennessy</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl29_lblPlayer" title="PoNY">Saul Graves</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl30_lblPlayer" title="PoNY">Michael Rice</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl31_lblPlayer" title="PoNY">Charlie Holtz</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl32_lblPlayer" title="PoNY">Carter Thallon</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl33_lblPlayer" title="PoNY">Matthew Weintraub</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl34_lblPlayer" title="PoNY">Gabe Stump</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl35_lblPlayer" title="PoNY">Beaufort Kittredge</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl36_lblPlayer" title="PoNY">Anthony Prato</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl37_lblPlayer" title="PoNY">Brendan Chin</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListGoals_ctl38_lblPlayer" title="PoNY">Noriaki To</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr>
+	</table>
+</div>
+			</div>
+
+			<div class="slide">
+				<div>
+	<span class="smaller"></span><table class="global_table" cellspacing="0" cellpadding="0" border="0" id="CT_Right_1_gvListAssists" style="border-collapse:collapse;">
+		<tr valign="top">
+			<th scope="col">Players</th><th scope="col">Assists</th>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl02_lblPlayer" title="PoNY">Jimmy Mickle</span>
+                         </td><td align="center">31</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl03_lblPlayer" title="PoNY">Sean Keegan</span>
+                         </td><td align="center">19</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl04_lblPlayer" title="PoNY">Harper Garvey</span>
+                         </td><td align="center">16</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl05_lblPlayer" title="PoNY">Chris Kocher</span>
+                         </td><td align="center">16</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl06_lblPlayer" title="PoNY">Samuel Little</span>
+                         </td><td align="center">15</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl07_lblPlayer" title="PoNY">Alexander Ladomatos</span>
+                         </td><td align="center">12</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl08_lblPlayer" title="PoNY">Ben Jagt</span>
+                         </td><td align="center">8</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl09_lblPlayer" title="PoNY">Benjamin Spielman</span>
+                         </td><td align="center">7</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl10_lblPlayer" title="PoNY">Milo Snyder</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl11_lblPlayer" title="PoNY">Jack Marsh</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl12_lblPlayer" title="PoNY">Michael Drost</span>
+                         </td><td align="center">6</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl13_lblPlayer" title="PoNY">John Wodatch</span>
+                         </td><td align="center">5</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl14_lblPlayer" title="PoNY">Isaac Saul</span>
+                         </td><td align="center">4</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl15_lblPlayer" title="PoNY">Conrad Schloer</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl16_lblPlayer" title="PoNY">Clark Cofer</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl17_lblPlayer" title="PoNY">Kevin Norton</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl18_lblPlayer" title="PoNY">Evan Padget</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl19_lblPlayer" title="PoNY">Matthew Lemar</span>
+                         </td><td align="center">3</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl20_lblPlayer" title="PoNY">Tyler Haskell</span>
+                         </td><td align="center">2</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl21_lblPlayer" title="PoNY">Michael Brenner</span>
+                         </td><td align="center">2</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl22_lblPlayer" title="PoNY">Joshua Stevens-Stein</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl23_lblPlayer" title="PoNY">William Dean</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl24_lblPlayer" title="PoNY">Benjamin Katz</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl25_lblPlayer" title="PoNY">John (Jack) Flintermann</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl26_lblPlayer" title="PoNY">Matt Hennessy</span>
+                         </td><td align="center">1</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl27_lblPlayer" title="PoNY">Saul Graves</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl28_lblPlayer" title="PoNY">Michael Rice</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl29_lblPlayer" title="PoNY">Charlie Holtz</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl30_lblPlayer" title="PoNY">Carter Thallon</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl31_lblPlayer" title="PoNY">Matthew Weintraub</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl32_lblPlayer" title="PoNY">Gabe Stump</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl33_lblPlayer" title="PoNY">Beaufort Kittredge</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl34_lblPlayer" title="PoNY">Markian Kuzmowycz</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl35_lblPlayer" title="PoNY">Anthony Prato</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl36_lblPlayer" title="PoNY">Brendan Chin</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="alt" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl37_lblPlayer" title="PoNY">Laurent Loiseau</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr><tr class="row" valign="top">
+			<td>
+                             <span id="CT_Right_1_gvListAssists_ctl38_lblPlayer" title="PoNY">Noriaki To</span>
+                         </td><td align="center">&nbsp;</td>
+		</tr>
+	</table>
+</div>
+			</div>
+		</div>
+        <div style="padding: 4px; background: #eee; border: 1px solid #bbb; border-radius: 4px; margin-top: 4px;">Hover over a player's name to see his/her team name.</div>
+	</div>
+</div>
+
+
+			</aside>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer">
+			
+
+<div class="footer_info clearfix">
+	&copy; 2018 usaultimate.org All Rights Reserved.
+	<ul class="footer_links clearfix">
+		<li><a href="http://www.usaultimate.org/privacy_policy.aspx" target="_blank">Privacy Policy</a></li>
+		<li>|</li><li><a href="http://www.usaultimate.org/about/contact_us/" target="_blank">Contact Us</a></li>
+	</ul>
+</div>
+
+<div class="vcard">
+	<a class="fn org url" href="http://www.usaultimate.org">USA Ultimate</a>
+	<div class="adr">
+		<div><span class="street-address">5825 Delmonico Dr</span> • <span class="extended-address">Suite 350</span></div> 
+		<span class="locality">Colorado Springs</span>,  
+		<abbr class="region" title="Colorado">CO</abbr>
+		<span class="postal-code">80919</span>
+		<div class="country-name">USA</div>
+	</div>
+	<div class="tel">800.872.4384 <span class="type">Work</span></div>
+	<!--
+	<div class="tel">303.447.3472 <span class="type">Work</span></div>
+	<div class="tel">303.447.3483 <span class="type">Work</span> <span class="type fax">Fax</span></div>
+	-->
+</div>
+
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="/cms/includes/functionsC.js"></script> 
+	<script src="/cms/includes/jquery/jquery-functions.js"></script>
+
+	
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3989C74E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCAKLrN6JAQLq+rXRBgK0qNb+BwK0qKKPDwKF5LetBgKZv8yTAQL+1cqjAQL+1dbmA8RFA4/46VYXr8zucPYwxKprBTfL" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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ZGVjb3JhdGlvbjpub25lO2JvcmRlci1ib3R0b206MXB4IHNvbGlkICM4ODg7Jz44IC0gMTM8L2E+ZGQCAg9kFgICAQ8PFgIfAQWAATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvRXZlbnR0ZWFtLz9UZWFtSWQ9SWclMmI4Q3IxJTJiJTJiOWJYVEdsJTJmS25CTlZKMmlhQmxNJTJiUEFCTGZnU3hUM2l0ZWslM2QnIHRhcmdldD0nX2JsYW5rJz5ISUdIIEZJVkU8L2E+ZGQCAw9kFgZmD2QWAgIBDw8WAh8BBQdKdWx5IDA3ZGQCAQ8PZBYCHwcFBGxvc3MWAgIBDw8WAh8BBcEBPGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9tYXRjaF9yZXBvcnQvP0V2ZW50R2FtZUlkPTBwSHN4TFZqaTNIczVoUUtERzhFcktEM1QzclhiOHpvVTFEYk5IU0pIT00lM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+OSAtIDExPC9hPmRkAgIPZBYCAgEPDxYCHwEFfjxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvRXZlbnR0ZWFtLz9UZWFtSWQ9UFVrZm05ZFlGSVR6dTFod1kwWnAxQkQxR3FURHJZM0VDdjNMeFpURERqYyUzZCcgdGFyZ2V0PSdfYmxhbmsnPlBpdHRzYnVyZ2ggVGVtcGVyPC9hPmRkAgQPZBYGZg9kFgICAQ8PFgIfAQUHSnVseSAwN2RkAgEPD2QWAh8HBQRsb3NzFgICAQ8PFgIfAQXHATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvbWF0Y2hfcmVwb3J0Lz9FdmVudEdhbWVJZD1vS2RSWjNBc1N4NGZTSVVVT29JMSUyYnFoN01COFo1SiUyYmtlQklTJTJmN3R2SkdvJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjkgLSAxMzwvYT5kZAICD2QWAgIBDw8WAh8BBXc8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPSUyYkYyNDQ1TGpiTVU1NzNSaWlBZkVmc1FaekZNVjM0RDByYVRySWNhajFPVSUzZCcgdGFyZ2V0PSdfYmxhbmsnPlN1YiBaZXJvPC9hPmRkAgUPZBYGZg9kFgICAQ8PFgIfAQUHSnVseSAwOGRkAgEPD2QWAh8HBQN3aW4WAgIBDw8WAh8BBcEBPGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9tYXRjaF9yZXBvcnQvP0V2ZW50R2FtZUlkPUE2WU5yTGpqZ1R1TFphbFZiTE9EMnduQVQ3dDFLZGNGZFhzbnJiTjIxYzglM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+MTMgLSA3PC9hPmRkAgIPZBYCAgEPDxYCHwEFeTxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvRXZlbnR0ZWFtLz9UZWFtSWQ9dzBNUXhGcUJ2T0tpaWFkNFdXaFF3a3B0eXhzQjhSNzJTbm9helpZb1oxcyUzZCcgdGFyZ2V0PSdfYmxhbmsnPk1lZGljaW5lIE1lbjwvYT5kZAIGD2QWBmYPZBYCAgEPDxYCHwEFB0p1bHkgMDhkZAIBDw9kFgIfBwUEbG9zcxYCAgEPDxYCHwEFwwE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9UDlvSnY4YWx0cCUyYnZmR1hQVVRpa3NRYm1aeTZSZFRzY3JBakNobXMzcllFJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjkgLSAxMjwvYT5kZAICD2QWAgIBDw8WAh8BBXk8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPTNuVnF5c2NJa3ozTmFIYURwQjlDZWdURGxkVWRWZDQlMmJwNzVqUFo4eXNJQSUzZCcgdGFyZ2V0PSdfYmxhbmsnPlRydWNrIFN0b3A8L2E+ZGQCBw9kFgZmD2QWAgIBDw8WAh8BBQdKdWx5IDA4ZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFwwE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9bVJuQnNmVlhZSiUyZjdrQUxFRWEzRGlzSTFob3huRUtZR3JWYzEydUJoUXVBJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjEzIC0gNzwvYT5kZAICD2QWAgIBDw8WAh8BBXY8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPXNGc2hndDM5d3U4TUlzWmZsUlR4S3h1NWcxN0xXZ2lMaVZEM21YRHBEdkUlM2QnIHRhcmdldD0nX2JsYW5rJz5HdWVycmlsbGE8L2E+ZGQCCA9kFgZmDw8WAh8GAgMWAh8HBQt0aEV2ZW50R2FtZRYCAgEPDxYCHwEFvwE8YSBocmVmPScvZXZlbnRzLzIwMTgtVVMtT3Blbi1DbHViLUNoYW1waW9uc2hpcHMvJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzk5OTtjb2xvcjojMDAwOyc+MjAxOCBVLlMuIE9wZW4gQ2x1YiBDaGFtcGlvbnNoaXBzPC9hPmRkAgEPDxYCHwBoZGQCAg8PFgIfAGhkZAIJD2QWBmYPZBYCAgEPDxYCHwEFCUF1Z3VzdCAwM2RkAgEPD2QWAh8HBQN3aW4WAgIBDw8WAh8BBcEBPGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9tYXRjaF9yZXBvcnQvP0V2ZW50R2FtZUlkPXNrY1VValdWcjRCOUpncEFad2loYjRCcm1KbXZJcHA1bWNoOUtFZjBEUnMlM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+MTQgLSA5PC9hPmRkAgIPZBYCAgEPDxYCHwEFjQE8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPUt0JTJiYjFOS0s3SSUyZlNHcWxZR1RQZGFYbk9hQkJIa3ZJY0w0NVBGbiUyYk5kNXMlM2QnIHRhcmdldD0nX2JsYW5rJz5CdW5rYSBTaHV0dGVyIEJ1enogQnVsbGV0czwvYT5kZAIKD2QWBmYPZBYCAgEPDxYCHwEFCUF1Z3VzdCAwM2RkAgEPD2QWAh8HBQRsb3NzFgICAQ8PFgIfAQXDATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvbWF0Y2hfcmVwb3J0Lz9FdmVudEdhbWVJZD1PeDRBNUdFbWM0UkJmQ3Q3N1JwODdLRnRPRVBNT2o3bVg5MSUyYlhuYUpHcmslM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+OSAtIDE1PC9hPmRkAgIPZBYCAgEPDxYCHwEFdTxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvRXZlbnR0ZWFtLz9UZWFtSWQ9MlVqZFdXZEl4WFF5TWhhVWNhcTlEMDBrcnhSMHVZU0pUMlNpd0V2dmcySSUzZCcgdGFyZ2V0PSdfYmxhbmsnPlJldm9sdmVyPC9hPmRkAgsPZBYGZg9kFgICAQ8PFgIfAQUJQXVndXN0IDAzZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFwwE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9MVhYZnolMmZkODRvY3FxRkRuWVh6NkZXbWJDZ3BBWTFvMlBBYTZRNDIzSG5vJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE1IC0gMjwvYT5kZAICD2QWAgIBDw8WAh8BBX88YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPU9ZZ0Vub0xRTGlsJTJiMURVVGlKWXpNUlIycWxiZmMlMmYxam40WHYyODlScG5zJTNkJyB0YXJnZXQ9J19ibGFuayc+T3Nha2EgU3Bpcml0cyA8L2E+ZGQCDA9kFgZmD2QWAgIBDw8WAh8BBQlBdWd1c3QgMDRkZAIBDw9kFgIfBwUEbG9zcxYCAgEPDxYCHwEFxgE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9UjhxdHklMmZXd1RRZUNjJTJia0RHdkkxRTVmbDJqZEdjVzFXVXh6SmVQOXM0VWMlM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+MTIgLSAxNTwvYT5kZAICD2QWAgIBDw8WAh8BBXc8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPXdMTUoyZUlsWjRDM2VBWUtadmREYUdWejBVNU8zdDVQaTFzMHFSU2VpRjQlM2QnIHRhcmdldD0nX2JsYW5rJz5Eb3VibGV3aWRlPC9hPmRkAg0PZBYGZg9kFgICAQ8PFgIfAQUJQXVndXN0IDA0ZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFwgE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9SHFETVpBSDl6M3FDdUpwNUowMEExMzY5T2tWMGpGc1JMMk1xUmhoTlE5NCUzZCcgdGFyZ2V0PSdfYmxhbmsnIHN0eWxlPSdjb2xvcjojMjIyO3RleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlci1ib3R0b206MXB4IHNvbGlkICM4ODg7Jz4xNCAtIDEyPC9hPmRkAgIPZBYCAgEPDxYCHwEFeTxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvRXZlbnR0ZWFtLz9UZWFtSWQ9M25WcXlzY0lrejNOYUhhRHBCOUNlZ1REbGRVZFZkNCUyYnA3NWpQWjh5c0lBJTNkJyB0YXJnZXQ9J19ibGFuayc+VHJ1Y2sgU3RvcDwvYT5kZAIOD2QWBmYPZBYCAgEPDxYCHwEFCUF1Z3VzdCAwNGRkAgEPD2QWAh8HBQN3aW4WAgIBDw8WAh8BBcYBPGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9tYXRjaF9yZXBvcnQvP0V2ZW50R2FtZUlkPVVVMmQzQkg5a2FhUzU4aDZmJTJmMkh2S3N0SUNzbDV0VzRFVlVSTSUyYmhmNnlRJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE1IC0gMTM8L2E+ZGQCAg9kFgICAQ8PFgIfAQV5PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD1rdktDbnRCN0NOMDVDcGZueVpoR1gzc2t1emJoMWJNNno2UmdRRW5LVmZnJTNkJyB0YXJnZXQ9J19ibGFuayc+UmluZyBvZiBGaXJlPC9hPmRkAg8PZBYGZg9kFgICAQ8PFgIfAQUJQXVndXN0IDA1ZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxwE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9Q21jdlR0Rkg0RUslMmZnZ0JSUyUyYmM5NXVEVXVTTURsU3Z6RDA2d3NTbTMlMmJIOCUzZCcgdGFyZ2V0PSdfYmxhbmsnIHN0eWxlPSdjb2xvcjojMjIyO3RleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlci1ib3R0b206MXB4IHNvbGlkICM4ODg7Jz4xNCAtIDg8L2E+ZGQCAg9kFgICAQ8PFgIfAQV3PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD0lMmJGMjQ0NUxqYk1VNTczUmlpQWZFZnNRWnpGTVYzNEQwcmFUckljYWoxT1UlM2QnIHRhcmdldD0nX2JsYW5rJz5TdWIgWmVybzwvYT5kZAIQD2QWBmYPDxYCHwYCAxYCHwcFC3RoRXZlbnRHYW1lFgICAQ8PFgIfAQWzATxhIGhyZWY9Jy9ldmVudHMvVENULVByby1DaGFtcGlvbnNoaXBzLTIwMTgvJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzk5OTtjb2xvcjojMDAwOyc+VENUIFBybyBDaGFtcGlvbnNoaXBzIDIwMTg8L2E+ZGQCAQ8PFgIfAGhkZAICDw8WAh8AaGRkAhEPZBYGZg9kFgICAQ8PFgIfAQUMU2VwdGVtYmVyIDAxZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxAE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9SWppczB0NEw5Z3N6JTJieEE2TFozeTczYU5DMWM2S0RHVXN6b2RUUFpQaEVrJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjEyIC0gMTE8L2E+ZGQCAg9kFgICAQ8PFgIfAQV8PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD1ZTHhSZzgxemdZaHRDVlZ1bXF4MnowS3E4cWJqWlpLd0FUNzZwU04wOUNjJTNkJyB0YXJnZXQ9J19ibGFuayc+Q2hpY2FnbyBNYWNoaW5lPC9hPmRkAhIPZBYGZg9kFgICAQ8PFgIfAQUMU2VwdGVtYmVyIDAxZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxAE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9aFN5eTZaaFdRbUswSFZmJTJmMmtValhuZkxZR3dYS0JKOWhZd3hMYVhyTVNnJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE1IC0gMTA8L2E+ZGQCAg9kFgICAQ8PFgIfAQV5PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD1nZW5JYVAwTHclMmY3JTJmTnN4WlNHJTJmd0RlcjNRUG00Q1Z4VTNsakMxZE9SeVdVJTNkJyB0YXJnZXQ9J19ibGFuayc+UGF0cm9sPC9hPmRkAhMPZBYGZg9kFgICAQ8PFgIfAQUMU2VwdGVtYmVyIDAxZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxgE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9OTdJV0tXNzczSGgzVlpQaTY4byUyYlhqVVQ5WHlyaWpWayUyYlF0dWtiYWRCV0klM2QnIHRhcmdldD0nX2JsYW5rJyBzdHlsZT0nY29sb3I6IzIyMjt0ZXh0LWRlY29yYXRpb246bm9uZTtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjODg4Oyc+MTUgLSAxMDwvYT5kZAICD2QWAgIBDw8WAh8BBXk8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPXIxQ1FNWFpZT09wM3lHdDZSU0RHRU9YeElJRWNudWN5ekR5cVVCakowbU0lM2QnIHRhcmdldD0nX2JsYW5rJz5Kb2hubnkgQnJhdm88L2E+ZGQCFA9kFgZmD2QWAgIBDw8WAh8BBQxTZXB0ZW1iZXIgMDJkZAIBDw9kFgIfBwUDd2luFgICAQ8PFgIfAQXIATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvbWF0Y2hfcmVwb3J0Lz9FdmVudEdhbWVJZD1GYTlRMG0yM0QlMmZZZUtlcVYxTkFCJTJmamdPdDd5SEtaY0VRYjRSeTAlMmJwbkRBJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE1IC0gMTQ8L2E+ZGQCAg9kFgICAQ8PFgIfAQV5PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD1rdktDbnRCN0NOMDVDcGZueVpoR1gzc2t1emJoMWJNNno2UmdRRW5LVmZnJTNkJyB0YXJnZXQ9J19ibGFuayc+UmluZyBvZiBGaXJlPC9hPmRkAhUPZBYGZg9kFgICAQ8PFgIfAQUMU2VwdGVtYmVyIDAyZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxAE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9TXVRdU0zY3dZaHYwb3JmVFpGVmhZSkloeUt5cCUyZnN4aHVGZ0NCZU9OdUhBJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE0IC0gMTA8L2E+ZGQCAg9kFgICAQ8PFgIfAQV5PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD0zblZxeXNjSWt6M05hSGFEcEI5Q2VnVERsZFVkVmQ0JTJicDc1alBaOHlzSUElM2QnIHRhcmdldD0nX2JsYW5rJz5UcnVjayBTdG9wPC9hPmRkAhYPZBYGZg9kFgICAQ8PFgIfAQUMU2VwdGVtYmVyIDAzZGQCAQ8PZBYCHwcFA3dpbhYCAgEPDxYCHwEFxAE8YSBocmVmPScvdGVhbXMvZXZlbnRzL21hdGNoX3JlcG9ydC8/RXZlbnRHYW1lSWQ9RDVvRE1CQnI0dThaalVxJTJiaFFXZFkySWdyenJFcW40TzVUcElGOXF0SDlRJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjE1IC0gMTI8L2E+ZGQCAg9kFgICAQ8PFgIfAQV1PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD0yVWpkV1dkSXhYUXlNaGFVY2FxOUQwMGtyeFIwdVlTSlQyU2l3RXZ2ZzJJJTNkJyB0YXJnZXQ9J19ibGFuayc+UmV2b2x2ZXI8L2E+ZGQCFw9kFgZmDw8WAh8GAgMWAh8HBQt0aEV2ZW50R2FtZRYCAgEPDxYCHwEFzQE8YSBocmVmPScvZXZlbnRzL05vcnRoZWFzdC1NZW5zLVJlZ2lvbmFsLUNoYW1waW9uc2hpcC0yMDE4LycgdGFyZ2V0PSdfYmxhbmsnIHN0eWxlPSdmb250LXdlaWdodDpib2xkO3RleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlci1ib3R0b206MXB4IHNvbGlkICM5OTk7Y29sb3I6IzAwMDsnPk5vcnRoZWFzdCBNZW4ncyBSZWdpb25hbCBDaGFtcGlvbnNoaXA8L2E+ZGQCAQ8PFgIfAGhkZAICDw8WAh8AaGRkAhgPZBYGZg9kFgICAQ8PFgIfAQUDTi9BZGQCAQ9kFgICAQ8PFgIfAQXBATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvbWF0Y2hfcmVwb3J0Lz9FdmVudEdhbWVJZD1LMlVSZk10OTJEd1VSam16VXZSTCUyYlZac3REQiUyYnElMmJPZWpXNW1YT3FoMHVrJTNkJyB0YXJnZXQ9J19ibGFuaycgc3R5bGU9J2NvbG9yOiMyMjI7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgIzg4ODsnPjwvYT5kZAICD2QWAgIBDw8WAh8BBXc8YSBocmVmPScvdGVhbXMvZXZlbnRzL0V2ZW50dGVhbS8/VGVhbUlkPWhrNnVpc1R3emZwSFBva21BNExoUkRPV1daWW1iNFVEREpST0xQWHZrdDglM2QnIHRhcmdldD0nX2JsYW5rJz5EZWF0aHNxdWFkPC9hPmRkAhkPZBYGZg9kFgICAQ8PFgIfAQUDTi9BZGQCAQ9kFgICAQ8PFgIfAQW/ATxhIGhyZWY9Jy90ZWFtcy9ldmVudHMvbWF0Y2hfcmVwb3J0Lz9FdmVudEdhbWVJZD12QVd6OEZoVmprcE10Z0VOYyUyZlhIVVdMMkZZTk1pRmRYZVUwMXpsSiUyZk1TZyUzZCcgdGFyZ2V0PSdfYmxhbmsnIHN0eWxlPSdjb2xvcjojMjIyO3RleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlci1ib3R0b206MXB4IHNvbGlkICM4ODg7Jz48L2E+ZGQCAg9kFgICAQ8PFgIfAQV4PGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9FdmVudHRlYW0vP1RlYW1JZD1ic21KN1Z3bDJpRGRGRzh2dmp5OVRoMW1YdHlRdHRkVTRxcVp5ek5ZUTNvJTNkJyB0YXJnZXQ9J19ibGFuayc+QmFrZWQgQmVhbnM8L2E+ZGQCGg9kFgZmD2QWAgIBDw8WAh8BBQNOL0FkZAIBD2QWAgIBDw8WAh8BBbsBPGEgaHJlZj0nL3RlYW1zL2V2ZW50cy9tYXRjaF9yZXBvcnQvP0V2ZW50R2FtZUlkPTJpeE0zbEpab3Vv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" /></form>  
+</body>
+</html>

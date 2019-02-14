@@ -1,0 +1,48 @@
+{% extends 'teams/header.html' %}
+
+{% load crispy_forms_tags %}
+{% block javascript %}
+<script>
+setActive("profile");
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-5">
+
+	<div class="row">
+		<div class="col-sm-12 col-lg-4">
+			<div class="card">
+				<div class="card-body">
+					{% if user.name %}
+					<h4 class="card-title">{{user.name}}</h4>
+					<h5 class="card-subtitle mb-2 text-muted">@{{user.username}}</h4>
+
+					{% else %}
+					<h4 class="card-title">@{{user.username}}</h4>
+					{% endif %}
+
+					<p class="card-text">{{user.email}}</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-sm-12 col-lg-8">
+			<h2>Your Account</h2>
+			<h4>Access Level:</h4>
+			{% if user.is_staff %}
+			<p>Permissions level: Staff</p>
+			<p>You have access to the web scraper to input new data</p>
+			{% else %}
+			<p>Permissions level: User</p>
+			<p>You do not have access to the web scraper to input new data. Click <a href="#">here</a> to learn more.</p>
+			{% endif %}
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

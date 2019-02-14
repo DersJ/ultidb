@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ulti-info.com</title>
+	<meta charset="utf-8" />
+	
+	<!-- <link rel="stylesheet" href="{% static 'teams/css/bootstrap.min.css' %}" type = "text/css"/> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Droid+Sans|Droid+Serif|Anonymous+Pro|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/navbar_style.css' %}"/>
+	<style type="text/css">
+	html,
+	body {
+		height:100%
+	}	
+	</style>
+	
+</head>
+
+<body class="body">
+	{% include 'teams/navbar.html' %}
+	
+	{% include "teams/messages_display.html" %}
+	
+	{% block content %}
+	{% endblock %}	
+	
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+	{% block javascript %}{% endblock %}
+</body>
+
+</html>

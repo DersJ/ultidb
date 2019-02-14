@@ -1,0 +1,29 @@
+{% extends "teams/header.html" %}
+{% load static %}
+
+{% block javascript %}
+<script>
+setActive("home");
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="hero" style="">
+	<div class="container py-5">
+		<div class="jumbotron jumbotron--hero text-center">
+			<h1 class="display-2">The Ultimate Database</h1>
+
+			<p class="lead mb-4 mx-5">
+				Your home for info and history on the sport of ultimate: teams, players, rosters, tournaments, and more. Find a team to get started.
+			</p>
+			<a class="btn btn-primary d-inline-block mx-1 my-3" href="#" role="button">
+				Find a team
+			</a>
+			<a class="btn btn-secondary d-inline-block mx-1 my-3" href="/teams/" role="button">
+				See the teams list
+			</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}	

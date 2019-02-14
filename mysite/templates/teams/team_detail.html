@@ -1,0 +1,39 @@
+{% extends "teams/header.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-9">
+
+<h2>{{team.name}} 
+
+{%if team.nickname%} ({{team.nickname}}) {% endif %}</h2>
+<h6>{{team.city}}</h6>
+
+<p>{{team.name}} plays in the USA Ultimate {{ team.get_division_display }} division. </p>
+<p>{{team.bio}}</p>
+	</div>
+	<div class="col-sm-3">
+		<div class="card">
+			<img class="card-img-top" src="{% static 'img/default.jpg' %}">
+			<div class="card-body">
+				<h5 class="card-title">{{team.name}}</h5>
+				<h6 class="card-subtitle text-muted">{{team.city}}</h6>
+				<br>
+				<h6> Rosters </h6>
+				<ul>
+					{% for roster in team.rosters.all %}
+					<li><a href="/teams/rosters/{{ roster.id }}/" >{{roster}}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		{% if user.is_staff %}
+		<a class="btn btn-secondary mt-3" href="edit/" role="button">Edit Team</a>
+		{% endif %}
+	</div>
+</div>
+</div>
+{% endblock %}	

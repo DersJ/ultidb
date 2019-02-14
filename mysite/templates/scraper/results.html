@@ -1,0 +1,70 @@
+{% extends "teams/header.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block javascript %}
+<script>
+setActive("scraper");
+
+function saveTeam(qid, tid) {
+	console.log("ajaxing");
+	$.ajax({
+		url: '{% url "ajax-save-eventteam" %}',
+		data: { 'qid': qid,
+				'tid': tid },
+		dataType: 'json',
+		success: function (data) {
+			if (data.saved) {
+				alert("team saved");
+			}
+		}
+	});
+}
+
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container my-5">
+	<div class="row">
+		<div class="col">
+			<h2>Your Results</h2>
+			{% for q in queries %}
+			<div class="query card my-4">
+
+				<div class="card-header">
+					<h5 class="">{{q.get_pageType_display }} Query at {{q.created}} </h5>
+				</div>
+				<div class="card-body">
+				<small><a href="{{q.url}}" target="blank">{{q.url}}</a></small>
+				<p class="card-text">
+				{% if q.teams.all %}
+					{% for t in q.teams.all %}
+					{{t.name}},
+					{%endfor%}
+					</p>
+					<a href="/scraper/results/{{q.pk}}" class="btn btn-outline-primary">View Details</a>
+				{% elif q.team.all %}
+					{% for t in q.team.all %}
+						Data found for {{t.name}} ({{t.nickname}})
+						{% if t.thisTeamInDb %}
+						<span class="badge badge-warning">matched</span></p>
+						{% else %}
+						</p><button onclick="saveTeam({{q.id}}, {{t.id}})" class="save btn btn-outline-success">Save This Team</button>
+						{% endif %}
+
+					{%endfor%}
+				{% else %}
+				No teams found.</p>
+				{% endif %}
+				</div>
+			</div>
+			
+			{% endfor %}
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}	

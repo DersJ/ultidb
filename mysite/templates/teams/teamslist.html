@@ -1,0 +1,54 @@
+{% extends "teams/header.html" %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+{% block javascript %}
+<script>
+setActive("teams");
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- <head>
+<link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+</head> -->
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+            <h2>{{title}}</h2>
+{% render_table table %}
+	<!--{% for c in content %}
+		
+	<thead>
+        <tr>
+            <th>Team Name</th>
+            <th>City</th>
+            <th>Division</th>
+            <th>Twitter Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in content %}
+        
+        <tr>
+            <td>{{c.name}}</td>
+            <td>{{c.city}}</td>
+            <td>{{c.division.value}}</td>
+            <td><a href='http://www.twitter.com/{{c.twitterHandle}}' target="_blank"> {{c.twitterHandle}}</a>></td>
+            
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+    </table>
+
+	{% endfor %}-->
+</div>
+</div>
+</div>
+{% endblock %}	
