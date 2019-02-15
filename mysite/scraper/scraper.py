@@ -35,6 +35,18 @@ class Scraper:
 
 	def scrapePoolsPage(self, url):
 		soup = BeautifulSoup(requests.get(url).text, 'html.parser')	
+
+		title = soup.find('h1', "title").get_text().split()
+		level = title[0]
+		gender = title[2]
+		print(level)
+		print(gender)
+		print(parseDivision(gender, level))
+		print(self.query)
+		self.query.division = parseDivision(gender, level)
+		self.query.tournament = soup.find("div", "breadcrumbs").find_all("a")[1].get_text()
+		self.query.save()
+
 		pools = soup.find_all('div', 'pool')
 		teams = []
 		matched = []
@@ -55,7 +67,7 @@ class Scraper:
 					match_url = teamInDb(name)
 					model = PoolPageTeamInfo(name=name, match_url=match_url, seed=seed, poolSeed=s, eventTeamURL="https://play.usaultimate.org"+link, query=self.query)
 					model.save()
-		print(teams)
+		#print(teams)
 
 
 		# for team in teams:
@@ -74,7 +86,7 @@ class Scraper:
 	def scrapeTeamEventPage(self, url):
 		soup = BeautifulSoup(requests.get(url).text, 'html.parser')
 		teamInfo = soup.find('div', 'profile_info')
-		results = {}
+		results = {"City": "", "Twitter": ""}
 		name=teamInfo.select('#CT_Main_0_ltlTeamName')
 		cleaned_name = Scraper.cleanNameString(name[0].get_text())
 
@@ -85,6 +97,7 @@ class Scraper:
 		results['City']=Scraper.cleanCityString(city.get_text()).split(',')[0]
 
 		dl_list = teamInfo.find_all('dl')
+
 		for dl in dl_list:
 			descriptor = dl.find('dt').get_text()
 			description = dl.find('dd')
@@ -94,10 +107,13 @@ class Scraper:
 				results["Gender Division"] = description.get_text()
 			if(descriptor == "Twitter:"):
 				results["Twitter"] = description.find('a').get_text()
+
+
 		results['Division'] = parseDivision(results['Gender Division'], results['Competition Level'])
 		instance = TeamPageData(name=results['Name'], nickname=results['Nickname'], city=results['City'], division=results['Division'], twitterLink=results['Twitter'], query=self.query)
 		instance.save()
-		return results
+
+		return instance
 
 	def scrapeTeamPage(url):
 		soup = BeautifulSoup(requests.get(url).text, 'html.parser')
@@ -128,22 +144,22 @@ def teamInDb(teamName):
 def parseDivision(gender, level):
 	if("women" in gender.lower() or "girl" in gender.lower()):
 		if("club" in level.lower()):
-			return "Womens"
+			return "W"
 		elif("college" in level.lower()):
-			return "College Womens"
+			return "CW"
 		elif("youth" in level.lower()):
-			return "Youth Womens"
+			return "YW"
 	elif("x" in gender.lower()):
 		if("club" in level.lower()):
-			return "Mixed"
+			return "X"
 		elif("college" in level.lower()):
-			return "College Mixed"
+			return "CX"
 		elif("youth" in level.lower()):
-			return "Youth Mixed"
+			return "YX"
 	elif("men" in gender.lower() or "open" in gender.lower() or "boy" in gender.lower()):
 		if("club" in level.lower()):
-			return "Open"
+			return "O"
 		elif("college" in level.lower()):
-			return "College Open"
+			return "CO"
 		elif("youth" in level.lower()):
-			return "Youth Open"
+			return "YO"

@@ -3,37 +3,37 @@
 {% load crispy_forms_tags %}
 
 {% block javascript %}
-  <script>
-  	function saveTeam(qid, tid) {
-	console.log("ajaxing");
-	$.ajax({
-		url: '{% url "ajax-save-team" %}',
-		data: { 'qid': qid,
-				'tid': tid },
-		dataType: 'json',
-		success: function (data) {
-			if (data.saved) {
-				alert("team saved");
+<script>
+	function saveTeam(qid, tid) {
+		console.log("ajaxing");
+		$.ajax({
+			url: '{% url "ajax-save-team" %}',
+			data: { 'qid': qid,
+			'tid': tid },
+			dataType: 'json',
+			success: function (data) {
+				if (data.saved) {
+					location.reload();
+				}
 			}
-		}
-	});
-}
+		});
+	}
 
-function saveAll(id) {
-	console.log("ajaxing");
-	$.ajax({
-		url: '{% url "ajax-save-all" %}',
-		data: { 'id': id },
-		dataType: 'json',
-		success: function (data) {
-			if (data.saved) {
-				alert("teams saved");
+	function saveAll(id) {
+		console.log("ajaxing");
+		$.ajax({
+			url: '{% url "ajax-save-all" %}',
+			data: { 'id': id },
+			dataType: 'json',
+			success: function (data) {
+				if (data.saved) {
+					location.reload();
+				}
 			}
-		}
-	});
-}
-setActive("scraper");
-  </script>
+		});
+	}
+	setActive("scraper");
+</script>
 {% endblock %}
 
 {% block content %}
@@ -42,10 +42,10 @@ setActive("scraper");
 	<div class="row mb-3">
 		<div class="col-sm-10">
 			<h3 class="card-title">{{query.get_pageType_display }} Query at {{query.created}} </h3>
-					<h6 class="card-subtitle text-muted">Click a row to view more info.</h6>
+			<h6 class="card-subtitle text-muted">Click a row to view more info.</h6>
 		</div>
 		<div class="col-sm-2">
-			<button onclick="saveAll({{query.id}})" class="btn btn-success">Save all teams</button>
+			<button onclick="saveAll({{query.id}})" class="btn btn-success"><span class="spinner-border spinner-border-sm" role="status" ></span> Save all teams</button> 
 		</div>
 	</div>
 	<div class="row">
@@ -55,25 +55,25 @@ setActive("scraper");
 				<ul class="list-group list-group-flush">
 					{% for t in teams %}
 					<li class="list-group-item team">
-					{% if t.thisTeamInDb %}
+						{% if t.thisTeamInDb %}
 						{{t.name}} <span class="badge badge-warning">matched</span>
 						<p class="url hide"><a href="{{t.eventTeamURL}}" target="blank">{{t.eventTeamURL|truncatechars:40}}</a></p>
 						<a href="{{t.thisTeamInDb}}" class="hide save btn btn-outline-dark">View Matched Team</a>
-					{% else %}
+						{% else %}
 						{{t.name}} <span class="badge badge-dark">No match</span>
 						<p class="url hide"><a href="{{t.eventTeamURL}}"  target="blank">{{t.eventTeamURL|truncatechars:40}}</a></p>
-					
-					<button onclick="saveTeam({{query.id}}, {{t.id}})" class="hide save btn btn-success">Save This Team Ajax</button>
-					{% endif %}
+
+						<button onclick="saveTeam({{query.id}}, {{t.id}})" class="hide save btn btn-success">Save This Team Ajax</button>
+						{% endif %}
 
 					</li>
 					{% endfor %}
-					</ul>
+				</ul>
 
-				</div>
-				<a href="/scraper/results/" class="btn btn-danger">Back</a>
 			</div>
+			<a href="/scraper/results/" class="btn btn-secondary">Back</a>
 		</div>
 	</div>
+</div>
 
-	{% endblock %}	
+{% endblock %}	

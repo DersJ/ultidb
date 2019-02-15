@@ -14,7 +14,7 @@ function saveTeam(qid, tid) {
 		dataType: 'json',
 		success: function (data) {
 			if (data.saved) {
-				alert("team saved");
+				location.reload();
 			}
 		}
 	});
@@ -34,7 +34,8 @@ function saveTeam(qid, tid) {
 			<div class="query card my-4">
 
 				<div class="card-header">
-					<h5 class="">{{q.get_pageType_display }} Query at {{q.created}} </h5>
+					<h5 class="card-title">{{q.tournament}} {{q.get_division_display}}</h5>
+					<h6 class="card-subtitle text-muted">{{q.get_pageType_display }} Query at {{q.created}}</h6>
 				</div>
 				<div class="card-body">
 				<small><a href="{{q.url}}" target="blank">{{q.url}}</a></small>
@@ -63,6 +64,7 @@ function saveTeam(qid, tid) {
 			
 			{% endfor %}
 
+			<a href="/scraper/" class="btn btn-secondary">Back</a>
 		</div>
 	</div>
 </div>
