@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^teams/', include('teams.urls')),
     path('account/', include('account.urls')),
+    #path('account/', include('rest_email_auth.urls')),
+    path('account/', include('django.contrib.auth.urls')),
     url(r'^scraper/', include('scraper.urls')),
     url(r'^$', TemplateView.as_view(template_name='teams/home.html'), name='home'),
     path('about/', TemplateView.as_view(template_name='teams/about.html'), name='about'),

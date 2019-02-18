@@ -3,11 +3,12 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.views import generic
+from django.contrib import messages
 
 from account.forms import SignUpForm
 
 def loginview(request):
-	return render(request, 'login.html')
+	return render(request, 'registration/login.html')
 
 
 def signup(request):
@@ -22,18 +23,22 @@ def signup(request):
             return redirect('/')
     else:
         form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 class ProfileView(generic.DetailView):
-    template_name = 'profile.html'
+    template_name = 'registration/profile.html'
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         now = timezone.now()
-
+        
         return context
 
 
     def get_object(self):
         return self.request.user
+
+def passwordChangeDoneView(request):
+    messages.success(request, "Successfully changed password")
+    return redirect('/account/profile')    

@@ -10,6 +10,7 @@ from django.views import View
 from teams.forms import ScraperInputForm, ScraperResultsForm, TeamForm
 from django.core.exceptions import ValidationError
 from django.db.models import Q
+
 import ast
 
 
@@ -25,6 +26,7 @@ def teamlist(request, *args, **kwargs):
 		title = "Teams List"
 	table.exclude = ('id', 'twitterHandle', 'twitterLink', 'bio', 'nickname')
 	RequestConfig(request, paginate={'per_page': 15}).configure(table)
+	
 	return render(request, 'teams/teamslist.html', {'table': table, 'title': title})
 
 def teamEdit(request, pk=None):

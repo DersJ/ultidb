@@ -13,7 +13,8 @@ class UserAdmin(auth_admin.UserAdmin):
             'fields': ('username', 'password'),
         }),
         (_('Personal Information'), {
-            'fields': ('name',),
+            'fields': ('name', 'email'),
+
         }),
         (_('Permissions'), {
             'fields': (
@@ -31,6 +32,7 @@ class UserAdmin(auth_admin.UserAdmin):
     list_display = (
         'username',
         'name',
+        'email',
         'is_active',
         'is_staff',
         'is_superuser',
