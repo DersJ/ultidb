@@ -4,6 +4,9 @@
 
 {% block javascript %}
 <script>
+	$( document ).ready(function() {
+		$("#saveAllSpinner").hide();
+});
 	function saveTeam(qid, tid) {
 		console.log("ajaxing");
 		$.ajax({
@@ -21,6 +24,7 @@
 
 	function saveAll(id) {
 		console.log("ajaxing");
+		$("#saveAllSpinner").show();
 		$.ajax({
 			url: '{% url "ajax-save-all" %}',
 			data: { 'id': id },
@@ -28,6 +32,7 @@
 			success: function (data) {
 				if (data.saved) {
 					location.reload();
+					$("#saveAllSpinner").hide();
 				}
 			}
 		});
@@ -45,7 +50,7 @@
 			<h6 class="card-subtitle text-muted">Click a row to view more info.</h6>
 		</div>
 		<div class="col-sm-2">
-			<button onclick="saveAll({{query.id}})" class="btn btn-success"><span class="spinner-border spinner-border-sm" role="status" ></span> Save all teams</button> 
+			<button onclick="saveAll({{query.id}})" class="btn btn-success"><span class="spinner-border spinner-border-sm" id="saveAllSpinner" role="status" ></span> Save all teams</button> 
 		</div>
 	</div>
 	<div class="row">

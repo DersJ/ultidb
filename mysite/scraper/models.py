@@ -44,6 +44,7 @@ class PoolPageTeamInfo(models.Model):
 		return '%s seeded %s' % (self.name, self.seed)
 
 	def thisTeamInDb(self):
+		print(self.name)
 		if Team.objects.filter(name__contains=self.name).filter(division=self.query.division):
 			match = Team.objects.filter(name__contains=self.name)[0]
 			match_url = "/teams/%d/" % match.id

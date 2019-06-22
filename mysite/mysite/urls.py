@@ -19,8 +19,14 @@ from django.conf.urls import url, include
 from django.urls import path
 from django.contrib import admin
 from django.views.generic import TemplateView
+from rest_framework import routers
+from teams import views
+
+router = routers.DefaultRouter()
+router.register(r'teams', views.TeamViewSet)
 
 urlpatterns = [
+    path('api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^teams/', include('teams.urls')),
     path('account/', include('account.urls')),
@@ -30,7 +36,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='teams/home.html'), name='home'),
     path('about/', TemplateView.as_view(template_name='teams/about.html'), name='about'),
     path('401/', TemplateView.as_view(template_name='teams/401.html'), name='401'),
-
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
 if settings.DEBUG:

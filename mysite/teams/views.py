@@ -10,6 +10,8 @@ from django.views import View
 from teams.forms import ScraperInputForm, ScraperResultsForm, TeamForm
 from django.core.exceptions import ValidationError
 from django.db.models import Q
+from rest_framework import viewsets
+from teams.serializers import TeamSerializer
 
 import ast
 
@@ -152,3 +154,9 @@ class ScraperResults(View):
 		context = {}
 		return render(request, 'teams/scraper_results.html', context)
 
+class TeamViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
